@@ -8,6 +8,13 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+ <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+ <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+ <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -69,16 +76,25 @@
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form" name='login' action='elogin.php' method='POST' id="login">
-          	<div class='btn btn-group'	style="margin-left:100px;">
-          		<button type="button" class="btn btn-info ">
-          	            <lable for="Accesso_azienda">  Login azienda </lable>
-						<input type="radio" name='tipoLog' value='azienda' REQUIRED/>
-				</button>
-				<button type="button" class="btn btn-warning">
-					<lable for="Accesso_utente">  Login utente  </lable>
-					<input	 type="radio" name='tipoLog' value='utente' REQUIRED/>
-				</button>
-			</div><br/><br/>
+          
+          
+ 
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <br>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn active">
+          <input type="radio" name='tipoLog' value='azienda'  REQUIRED checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Login azienda</span>
+        </label>
+        <label class="btn">
+          <input type="radio" name='tipoLog' value='utente' REQUIRED checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Login utente</span>
+        </label>
+      </div>
+	 </div>
+	</div>
+<br/><br/>
             <div class="form-group">           
               <label for="Indirizzo_email"><span class="glyphicon glyphicon-user"></span> email</label>
               <input type="email"  name='email' class="form-control" id="mail" placeholder="Enter email" required>
